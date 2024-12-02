@@ -6,7 +6,8 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "loguru>=0.7.2",
+    "pydantic>=2.9.2",
     "pydantic-settings>=2.6.1",
-    "pydantic>=2.10.2",
-    "quixstreams>=0.5.7",
+    "quixstreams==3.3.0",
+    "websocket-client>=1.8.0",
 ]
