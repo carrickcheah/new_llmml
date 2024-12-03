@@ -1,20 +1,46 @@
-# Mircoservice 1: trede
+# Step by step guidance of this module
 
-Read data from Kraken API and push data to a kafka topic. Setup Use redpanda data streaming platform locally.  
+This module focuses on building an ingest microservice with two main tasks:  
 
-## Step 1: make basic project structure  
+1. Read data from the Kraken API.  
+2. Push the data to Kafka Topic 1.  
+
+## Basic set up ofproject structure
+
+a
+
+## Task 2: running redpanda locally  
+
+- create docker-compose folder
+- create Makefile
+- bash$ start-redpanda ,and makesure Redpanda is running locally.
+
+## Task 3   Mock trade data
+
+The first mock ensures the code functions correctly.  
+subtrade.run_mock.py and subtrade.kraken_api.mock.py is the template.  
+
+The second mock integrates QuixStream to push data to a Kafka topic.  
+subtrade.run_mock_2.py and subtrade.kraken_api.mock_2.py is the template.  
+
+## Task 4   Extract config with pydantic settings
 
 
-## Step 2: loguru and up redpanda locally  
+
+## Task 5 Kraken websocket API integration
 
 
-## Step 3: mocking trade data  
+
+## Task 6 Kraken websocket API integration
 
 
-## Step 4: extract config with pydantic settings  
+
+## Task 7 Kraken websocket API integration
 
 
-## Step 5: connect kraken websocket API  
+
+## Reflection on the lessons learnt  
 
 
-## Step 6: connect kraken websocket API  
+
+
