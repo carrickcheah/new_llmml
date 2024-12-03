@@ -12,7 +12,7 @@ class Config(BaseSettings):
     # Required configuration fields:
     kafka_broker_address: str  # Address of the Kafka broker (e.g., "localhost:9092").
     kafka_topic: str           # Kafka topic to which messages will be sent (e.g., "trades").
-    pairs: List[str]           # List of trading pairs to process (e.g., ["BTC/USD", "ETH/USD"]).
+    symbol: List[str]           # List of trading pairs to process (e.g., ["BTC/USD", "ETH/USD"]).
 
 # Create a global instance of the `Config` class to be used throughout the application.
 config = Config()

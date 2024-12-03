@@ -1,0 +1,6 @@
+First mock is make sure the code work.
+
+mock2 is install quixstream and push to kafka topic
+
+third is read kraken websocket
+

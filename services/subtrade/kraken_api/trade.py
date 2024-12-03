@@ -6,30 +6,30 @@ class Trade(BaseModel):
     """
     A trade from the Kraken API.
     """
-    pair: str
+    symbol: str
     price: float
-    volume: float
+    qty: float
     timestamp: datetime
     timestamp_ms: int
 
     @classmethod
     def from_kraken_api_response(
         cls,
-        pair: str,
+        symbol: str,
         price: float,
-        volume: float,
+        qty: float,
         timestamp: datetime,
     ) -> "Trade":
         """
         This class method allows creating a `Trade` object directly from raw Kraken API response data.
-        - Takes the raw fields (`pair`, `price`, etc.) from the response.
+        - Takes the raw fields (`symbol`, `price`, etc.) from the response.
         - Calls the class constructor to create an instance of the `Trade` class.
         - Converts the `timestamp` into milliseconds using `_datestr2milliseconds` to store it as `timestamp_ms`.
         """
         return cls(
-            pair=pair,
+            symbol=symbol,
             price=price,
-            volume=volume,
+            qty=qty,
             timestamp=timestamp,
             timestamp_ms=cls._datestr2milliseconds(timestamp),
         )
