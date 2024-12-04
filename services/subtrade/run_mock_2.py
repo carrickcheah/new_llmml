@@ -1,5 +1,5 @@
 from loguru import logger
-from kraken_api.kraken_api import KrakenMockAPI, Trade
+from kraken_api.mock_2 import KrakenMockAPI, Trade
 from quixstreams import Application
 from config import config
 
